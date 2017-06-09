@@ -1,4 +1,4 @@
-<div id="demo12">
+<div id="fancybox">
 	click HERE
 </div>
 
@@ -12,14 +12,15 @@
 
 
 <script>
- $('#demo12').on('click', function() { 
-    alert('1st click event');
-    //  Add items to the cart here
-});
+var clicked = 0;
 
-$('#demo12').on('click', function() { 
-    alert('2nd click event');
-    //  Do something else
+$('html').on('click', function (e) {
+    clicked++;
+    if (clicked >= 2) {
+        $.backstretch("<%=asset_path 'outside.jpg'%>");
+    } else {
+        e.preventDefault();
+    }
 });
 
 </script>

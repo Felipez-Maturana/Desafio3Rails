@@ -4,11 +4,11 @@
 	<%=name%>
 	<%end%>
 <button id="outside" class="btn-primary">
-	Fondo 1
+	Fondo 1 - Fuera
 </button>
 
-<button id="cheers" class="btn-primary">
-	Fondo 2
+<button id="food" class="btn-primary">
+	Fondo 2 - Comida
 </button>
 <%= image_tag 'night.jpg',class:"img-responsive" %>
 <%= image_tag 'food.jpg',class:"img-responsive" %>
@@ -24,7 +24,7 @@
 });
 
 
-	$("#cheers").click(function(e) {
+	$("#food").click(function(e) {
     e.preventDefault();
     $.backstretch("<%=asset_path 'interior.jpg'%>");
 });
