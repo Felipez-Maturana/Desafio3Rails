@@ -1,2 +1,12 @@
+<div class="jumbotron">HOLA MUNDO</div>
 <h1>Pags#pag1</h1>
 <p>Find me in app/views/pags/pag1.html.erb</p>
+
+<% @users.each do |name|%>
+	<%=name%>
+	<%end%>
+
+ <script>
+ $.backstretch( "<%=asset_path 'interior.jpg'%>" );
+ </script>
+

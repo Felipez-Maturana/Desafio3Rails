@@ -1,0 +1,25 @@
+<div id="demo12">
+	click HERE
+</div>
+
+
+
+<% @users.each do |name|%>
+	<%=name%>
+	<%end%>
+
+
+
+
+<script>
+ $('#demo12').on('click', function() { 
+    alert('1st click event');
+    //  Add items to the cart here
+});
+
+$('#demo12').on('click', function() { 
+    alert('2nd click event');
+    //  Do something else
+});
+
+</script>

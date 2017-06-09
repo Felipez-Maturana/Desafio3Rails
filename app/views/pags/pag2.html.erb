@@ -1,2 +1,31 @@
 <h1>Pags#pag2</h1>
 <p>Find me in app/views/pags/pag2.html.erb</p>
+<% @users.each do |name|%>
+	<%=name%>
+	<%end%>
+<button id="outside" class="btn-primary">
+	Fondo 1
+</button>
+
+<button id="cheers" class="btn-primary">
+	Fondo 2
+</button>
+<%= image_tag 'night.jpg',class:"img-responsive" %>
+<%= image_tag 'food.jpg',class:"img-responsive" %>
+
+
+
+
+
+<script>
+	$("#outside").click(function(e) {
+    e.preventDefault();
+    $.backstretch("<%=asset_path 'outside.jpg'%>");
+});
+
+
+	$("#cheers").click(function(e) {
+    e.preventDefault();
+    $.backstretch("<%=asset_path 'interior.jpg'%>");
+});
+</script>
